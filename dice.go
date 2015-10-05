@@ -124,8 +124,8 @@ func (g *Game) CalculateHMAC() []byte {
 	return ourHMAC
 }
 
-// Verfiy takes a state and checks that the supplied number was fairly generated
-func Verfiy(clientSeed []byte, serverSeed []byte, nonce uint64, randNum float64) (bool, error) {
+// Verify takes a state and checks that the supplied number was fairly generated
+func Verify(clientSeed []byte, serverSeed []byte, nonce uint64, randNum float64) (bool, error) {
 	game, _ := NewGame(clientSeed, serverSeed)
 	game.Nonce = nonce
 

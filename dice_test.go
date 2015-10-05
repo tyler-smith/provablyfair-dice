@@ -52,7 +52,7 @@ func TestRandomServerSeed(t *testing.T) {
 
 func TestVerify(t *testing.T) {
 	for _, testRoll := range newTestRolls(t) {
-		verified, err := Verfiy(testRoll.ClientSeed, testRoll.ServerSeed, testRoll.Nonce, testRoll.Roll)
+		verified, err := Verify(testRoll.ClientSeed, testRoll.ServerSeed, testRoll.Nonce, testRoll.Roll)
 		assert.NoError(t, err)
 		assert.True(t, verified)
 	}
